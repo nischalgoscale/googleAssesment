@@ -45,16 +45,13 @@ public class AppPage extends CommonPageFunctions{
 			e.printStackTrace();
 		}
 		
-		for(WebElement el : GoogleSearchSuggestions){
-			System.out.println(el.getText());
-			Assert.assertTrue(el.getText().contains(keyToSearch), "Option doesn't contain searched key");
-		}
-		/*List allOptions = driver.findElements(By.xpath("//ul[@role='listbox']/li"));
+		
+		List allOptions = driver.findElements(By.xpath("//ul[@role='listbox']/li"));
 		
 		for (int i = 0; i < allOptions.size(); i++) {
 			String option = ((WebElement) allOptions.get(i)).getText();
 			System.out.println(option);
 			Assert.assertTrue(option.contains(keyToSearch), "Option doesn't contain searched key");
-		}*/
+		}
 	}
 }
